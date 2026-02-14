@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "karla", sans-serif;
+}
+
+@font-face {
+  font-family: "karla";
+  src: url("../contact-form-main/assets/fonts/Karla-Italic-VariableFont_wght.ttf");
+  font-weight: normal;
+}
+
+:root {
+  --primary-color-one: hsl(148, 38%, 91%);
+  --primary-color-two: hsl(169, 82%, 27%);
+  --error-color: hsl(0, 66%, 54%);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-color-one);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container {
+  min-height: auto;
+  background-color: #fff;
+  width: 40%;
+  padding: 15px 2rem;
+  border-radius: 13px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* +++++++++++++++++ ERROR FIELD +++++++++++++++++++++ */
+.error-message {
+  display: none;
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.show {
+  display: block;
+}
+
+/* +++++++++++++++++ NAME FIELD ++++++++++++++++++++++*/
+form .name {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  gap: 30px;
+}
+
+form .name .first-name {
+  display: flex;
+  width: 50%;
+  gap: 7px;
+  flex-direction: column;
+
+  input {
+    height: 2rem;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid black;
+  }
+}
+
+form .name .last-name {
+  gap: 7px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+  input {
+    height: 2rem;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid black;
+  }
+}
+
+form .name input:hover {
+  border: 1px solid hsl(169, 82%, 27%);
+  transition: all;
+  scale: 1.02;
+}
+form .name input:focus {
+  border: 1px solid hsl(169, 82%, 27%);
+  transition: all;
+  scale: 1.02;
+}
+form .name input:invalid {
+  border: 2px solid red;
+}
+
+/* ++++++++++++++++ EMAIL FIELD++++++++++++++++++++++++++*/
+form .email {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  input {
+    height: 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+  }
+}
+
+form .email input:hover {
+  border: 1px solid hsl(169, 82%, 27%);
+  transition: all;
+  scale: 1.02;
+}
+form .email input:focus {
+  border: 1px solid hsl(169, 82%, 27%);
+  transition: all;
+  scale: 1.02;
+}
+form .email input:invalid {
+  border: 1px solid red;
+}
+
+/* ++++++++++++++ Query type +++++++++++++++++++++++*/
+
+form .query-type {
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+form .query-type .query-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+form .query-type .query-list .general-query {
+  gap: 10px;
+  padding: 10px;
+  display: flex;
+  border: 1px solid black;
+  width: 50%;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+form .query-type .query-list .general-query:hover {
+  border: 1px solid hsl(169, 82%, 27%);
+}
+form .query-type .query-list .general-query:focus {
+  border: 1px solid hsl(169, 82%, 27%);
+  transition: all;
+  scale: 1.02;
+}
+
+form .query-type .query-list .support-request {
+  display: flex;
+  border: 1px solid black;
+  gap: 10px;
+
+  width: 50%;
+  align-items: center;
+  border-radius: 5px;
+}
+
+form .query-type .query-list .support-request:hover {
+  border: 1px solid hsl(169, 82%, 27%);
+}
+
+/* +++++++++++++++TEXTAREA FIELD +++++++++++++++ */
+form .message {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 10px;
+
+  textarea {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid black;
+  }
+}
+
+form .message textarea:hover {
+  border: 1px solid var(--primary-color-two);
+  transition: all;
+  scale: 1.02;
+}
+
+form .consent {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 10px 0;
+}
+
+form .consent input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #e0e0e0;
+  border: 1px solid var(--primary-color-one);
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  margin: 10px;
+}
+
+form .consent input[type="checkbox"]:checked {
+  background-color: var(--primary-color-two);
+}
+
+/* ++++++++++++++++++ BUTTON ++++++++++++++++++++++*/
+
+form button {
+  height: 2.7rem;
+  border-radius: 10px;
+  border: 1px solid var(--primary-color-one);
+  background-color: var(--primary-color-two);
+  color: #fff;
+  cursor: pointer;
+}
+
+form button:disabled {
+  background-color: hsl(168, 13%, 48%);
+}

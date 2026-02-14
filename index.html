@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Frontend Mentor | Contact form</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Contact Us</h1>
+        <form action="#">
+
+          <div class="name">
+            <div class="first-name">
+              <label for="first-name">First Name</label>
+              <input type="text" name="first-name" id="first-name" >
+              <span id="firstName-error-message" class="error-message" ></span>
+            </div>
+
+            <div class="last-name">
+              <label for="last-name">Last Name</label>
+              <input type="text" name="last-name" id="last-name">
+              <span id="lastName-error-message" class="error-message" ></span>
+            </div>
+          </div>
+
+          <div class="email">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" >
+            <span id="email-error-message" class="error-message" ></span>
+          </div>
+
+          <div class="query-type">
+            <p>Query type</p>
+            <div class="query-list">
+              <div class="general-query">
+              <input type="radio" name="general-query" id="general-query" >
+              <p>General Query</p>
+            </div>
+
+            <div class="support-request">
+              <input type="radio" name="support-request" id="support-request" >
+              <p>Support Request</p>
+            </div>
+            </div>
+            
+          </div>
+
+          <div class="message">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          </div>
+
+          <div class="consent">
+            <input type="checkbox" class="my-checkbox" />
+            <p>I consent to being contacted by the team</p>
+          </div>
+
+          <button type="submit" class="submit-btn
+          " disabled >Submit</button>
+
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by <a href="#">Aryan Mallick</a>.
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
