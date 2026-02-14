@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: "karla", sans-serif;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -34,8 +35,9 @@ main {
   min-height: auto;
   background-color: #fff;
   width: 40%;
-  padding: 15px 2rem;
+  padding: 15px 1rem;
   border-radius: 13px;
+  overflow: hidden;
 }
 
 form {
@@ -61,6 +63,16 @@ form .name {
   justify-content: space-around;
   padding: 10px 0;
   gap: 30px;
+}
+
+@media screen and (max-width: 375px) {
+  form .name {
+    flex-direction: column;
+  }
+
+  form .name .first-name {
+    width: 100%;
+  }
 }
 
 form .name .first-name {
@@ -150,6 +162,12 @@ form .query-type .query-list {
   display: flex;
   justify-content: space-between;
   gap: 30px;
+}
+
+@media screen and (max-width: 375px) {
+  form .query-type .query-list {
+    flex-direction: column;
+  }
 }
 
 form .query-type .query-list .general-query {
